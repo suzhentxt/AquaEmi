@@ -52,6 +52,18 @@ body {
    background-color: var(--blue);
 }
 
+.btn-container {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+
+.btn-container .home-btn,
+.delete-btn {
+   font-size: 20px;
+   width: 48%; 
+}
+
 .home-btn{
    width: 25%;
    border-radius: 5px;

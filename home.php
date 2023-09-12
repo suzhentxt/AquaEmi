@@ -79,7 +79,7 @@ if(isset($_GET['logout'])){
             <tr>
                 <th>Places</th>
                 <td>
-                  <p><?php echo $fetch['place']; ?></p>
+                  <p><?php echo $fetch['places']; ?></p>
                 </td>
             </tr>
         </table>

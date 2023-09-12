@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
    $about = mysqli_real_escape_string($conn, $_POST['about']);
    $socialmedia = mysqli_real_escape_string($conn, $_POST['socialmedia']);
    $games = mysqli_real_escape_string($conn, $_POST['games']);
-   $place = mysqli_real_escape_string($conn, $_POST['place']); 
+   $places = mysqli_real_escape_string($conn, $_POST['places']); 
 
    $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
       } elseif ($image_size > 2000000) {
          $message[] = 'Image size is too large!';
       } else {
-         $insert = mysqli_query($conn, "INSERT INTO `user_form`(name, email, password, image, about, socialmedia, games, place) VALUES('$name', '$email', '$pass', '$image', '$about', '$socialmedia', '$games', '$place')") or die('query failed');
+         $insert = mysqli_query($conn, "INSERT INTO `user_form`(name, email, password, image, about, socialmedia, games, places) VALUES('$name', '$email', '$pass', '$image', '$about', '$socialmedia', '$games', '$places')") or die('query failed');
 
          if ($insert) {
             move_uploaded_file($image_tmp_name, $image_folder);
@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
             <textarea name="about" placeholder="about" class="box" required></textarea>
             <textarea name="socialmedia" placeholder="social media" class="box" required></textarea>
             <textarea name="games" placeholder="games" class="box" required></textarea>
-            <textarea name="place" placeholder="place" class="box" required></textarea>
+            <textarea name="places" placeholder="places" class="box" required></textarea>
          </div>
       
       </div>
