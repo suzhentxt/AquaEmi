@@ -1,15 +1,5 @@
-step 1 :- 
-create databse in phpmyadmin
-
-step 2 :-
-
-click on create table and then select sql on the top and copy and paste below code in the query.
-
-
-
-
-
-
+step 1: create databse in phpmyadmin
+step 2 : click on create table and then select sql on the top and copy and paste below code in the query.
 
 
 
@@ -19,5 +9,9 @@ CREATE TABLE `user_form` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL,
+  `about` text NOT NULL,
+  `socialmedia` text NOT NULL,
+  `games` text NOT NULL,
+  `places` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4
